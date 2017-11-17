@@ -94,8 +94,6 @@ panel<-function(x,comparison,evidence,asp=1,outcome=NA){
            type="p", pch=19, cex=0.8)
     points(DirectT[!is.na(DirectT)],DirectEfficacyB[!is.na(DirectT)], col="black", type="l")
     points(DirectT[!is.na(DirectT)],-DirectEfficacyB[!is.na(DirectT)], col="black", type="l")
-    points(DirectT[!is.na(DirectT)],DirectFutile[!is.na(DirectT)],col="black",type="l", lty=2)
-    points(DirectT[!is.na(DirectT)],-DirectFutile[!is.na(DirectT)],col="black",type="l", lty=2)
     if (is.na(outcome)){
       title(comparison)
     }
@@ -108,7 +106,7 @@ panel<-function(x,comparison,evidence,asp=1,outcome=NA){
         title(comparison, ylab="Favors first      Favors second")
       }
     }
-    plot(c(0,1), c(-5,5), type = "n", xlab = "x", ylab = "y", asp = asp, xlim=c(0,1), ylim=c(-5,5))
+    plot(c(0,1), c(-5,5), type = "n", xlab = "t", ylab = " ", asp = asp, xlim=c(0,1), ylim=c(-5,5))
     par(new=TRUE)
     points(NetworkT[!is.na(NetworkT)],
            NetworkZscore[!is.na(NetworkT)], col="black",

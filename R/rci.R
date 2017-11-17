@@ -63,7 +63,7 @@ rci<-function(x,comparison,evidence,asp=0.01,outcome=NA){
       points(DirectTE[i],(-i), col="black", cex=0.2, lwd=0.1, type="p")
     }
     abline(v=0)
-    axis(1, at = seq(-1, 1, by = 0.5))
+    axis(1, at = seq(-1, 1, by = 1))
     if (is.na(outcome)){
       title(comparison)
     }
@@ -87,7 +87,7 @@ rci<-function(x,comparison,evidence,asp=0.01,outcome=NA){
       points(NetworkTE[i],(-i), col="black", cex=0.2, type="p", lwd=0.1)
     }
     abline(v=0)
-    axis(1, at = seq(-1, 1, by = 0.5))
+    axis(1, at = seq(-1, 1, by = 1))
     if (is.na(outcome)){
       title(comparison)
     }
@@ -111,7 +111,7 @@ rci<-function(x,comparison,evidence,asp=0.01,outcome=NA){
       points(DirectTE[i],(-i), col="black", cex=0.2, lwd=0.1, type="p")
     }
     abline(v=0)
-    axis(1, at = seq(-1, 1, by = 0.5))
+    axis(1, at = seq(-1, 1, by = 1))
     if (is.na(outcome)){
       title(comparison)
     }
@@ -133,7 +133,7 @@ rci<-function(x,comparison,evidence,asp=0.01,outcome=NA){
       points(NetworkTE[i],(-i), col="black", cex=0.2, type="p", lwd=0.1)
     }
     abline(v=0)
-    axis(1, at = seq(-1, 1, by = 0.5))
+    axis(1, at = seq(-1, 1, by = 1))
     if (is.na(outcome)){
       title(comparison)
     }
@@ -160,7 +160,7 @@ rci<-function(x,comparison,evidence,asp=0.01,outcome=NA){
       points(NetworkTE[i],(-i-0.2), col="black", cex=0.2, type="p", lwd=0.1)
     }
     abline(v=0)
-    axis(1, at = seq(-1, 1, by = 0.5))
+    axis(1, at = seq(-1, 1, by = 1))
     if (is.na(outcome)){
       title(comparison)
     }

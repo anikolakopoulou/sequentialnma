@@ -423,7 +423,7 @@ livenma<-function(data,level,type,effsize,tau.sq=NA,delta=NA){
                            tau.common=TRUE,tau.preset=sqrt(tau.sq),byvar=comp)
         CompPairw=metaPairw$bylevs
         metaNetw<- netmeta(metaD$TE,metaD$seTE,D$treat1,D$treat2,sm="MD",comb.random=TRUE,
-                           studlab=D$idyear,tau.preset=sqrt(tau.sq))
+                           studlab=D$idyear,tau.preset=sqrt(tau.sq),tol.multiarm = 1)
       }
       if (level=="arm" & type=="continuous" & effsize=="SMD"){
         metaD <- metacont(c(D$n1),c(D$y1),c(D$sd1),c(D$n2),c(D$y2),c(D$sd2),sm="SMD") #pairwise meta-analysis
@@ -431,7 +431,7 @@ livenma<-function(data,level,type,effsize,tau.sq=NA,delta=NA){
                            tau.common=TRUE,tau.preset=sqrt(tau.sq),byvar=comp)
         CompPairw=metaPairw$bylevs
         metaNetw<- netmeta(metaD$TE,metaD$seTE,D$treat1,D$treat2,sm="SMD",comb.random=TRUE,
-                           studlab=D$idyear,tau.preset=sqrt(tau.sq))
+                           studlab=D$idyear,tau.preset=sqrt(tau.sq),tol.multiarm = 1)
       }
       if (level=="study" & type=="binary" & effsize=="OR"){
         metaPairw<-metagen(D$effect, D$se,sm="OR",
@@ -452,14 +452,14 @@ livenma<-function(data,level,type,effsize,tau.sq=NA,delta=NA){
                            tau.common=TRUE,tau.preset=sqrt(tau.sq),byvar=comp)
         CompPairw=metaPairw$bylevs
         metaNetw<- netmeta(metaPairw$TE,metaPairw$seTE,D$treat1,D$treat2,sm="MD",comb.random=TRUE,
-                           studlab=D$idyear,tau.preset=sqrt(tau.sq))
+                           studlab=D$idyear,tau.preset=sqrt(tau.sq),tol.multiarm = T)
       }
       if (level=="study" & type=="continuous" & effsize=="SMD"){
         metaPairw<-metagen(D$effect, D$se,sm="SMD",
                            tau.common=TRUE,tau.preset=sqrt(tau.sq),byvar=comp)
         CompPairw=metaPairw$bylevs
         metaNetw<- netmeta(metaPairw$TE,metaPairw$seTE,D$treat1,D$treat2,sm="SMD",comb.random=TRUE,
-                           studlab=D$idyear,tau.preset=sqrt(tau.sq))
+                           studlab=D$idyear,tau.preset=sqrt(tau.sq),tol.multiarm = T)
       }
       if (level=="study" & type=="timetoevent" & effsize=="HR"){
         metaPairw<-metagen(D$effect, D$se,sm="HR",
