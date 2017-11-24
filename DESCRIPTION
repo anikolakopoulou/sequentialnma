@@ -10,4 +10,4 @@ Encoding: UTF-8
 LazyData: true
 Imports: meta , netmeta (>= 0.9-6) , caTools
 NeedsCompilation: no
-Packaged: 2017-11-24 15:37:16 UTC; tosku
+Packaged: 2017-11-24 15:37:16 UTC; tpapak
