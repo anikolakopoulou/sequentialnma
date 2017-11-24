@@ -4,15 +4,14 @@ install.packages("meta")
 install.packages("netmeta")
 install.packages("caTools")
 install.packages("devtools")
+install.packages("RCurl")
+install_github("esm-ispm-unibe-ch/sequentialnma")
 
 library(meta)
 library(netmeta)
 library(caTools)
 library(devtools)
-
-install.packages("RCurl")
 require(RCurl)
-install_github("esm-ispm-unibe-ch/sequentialnma")
 library(sequentialnma)
 
 #an example with binary data type and arm level data
